@@ -1,0 +1,63 @@
+<!-- Survey form where users can provide feedback or answers on a particular topic -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second task on form</title>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <p>Please answer all the questions honestly as your opinions help to build real products</p>
+    <form action="">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName"><br><br>
+
+        <label for="age">Enter your age:</label>
+        <input type="number" name="age"><br><br>
+
+        <label>Enter your gender:</label><br>
+        <input type="radio" id="male" name="gender">
+        <label for="male" name="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label><br><br>
+
+        <label for="thingsOwned">Select all the products which is owned by yourself or by your family: </label><br>
+        <input type="checkbox" name="car" id="car">
+        <label for="car" nam>Car</label><br>
+
+        <input type="checkbox" name="home" id="home">
+        <label for="home">Home</label><br>
+
+        <input type="checkbox" name="gold" id="gold">
+        <label for="gold">Gold</label><br>
+
+        <input type="checkbox" name="helicopter" id="helicopter">
+        <label for="helicopter">Helicopter</label><br>
+
+        <input type="checkbox" name="farmHouse" id="farmHouse">
+        <label for="farmHouse">Farm house</label><br><br>
+
+        <label for="device">Enter the device used for completing this survey</label><br>
+        <select name="deviceList" id="deviceList">
+            <option name="selectOption">Select an option</option>
+            <option name="Smart Phone">Smart Phone</option>
+            <option name="Tablet">Tablet</option>
+            <option name="Laptop">Laptop</option>
+            <option name="PC">PC</option>
+        </select><br><br>
+        
+        <label for="rating">How would you rate this survey? [ 0 to 5 ] </label><br>
+        <input type="range" name="rating" id="rating" min="0" max="5"><br><br>
+        
+        <label for="feedback">Please provide your feedback:</label><br>
+        <textarea name="feedback" id="feedback"></textarea><br><br>
+
+        <input type="submit" name="submit" id="submit" value="submit"><br><br>
+    </form>
+</body>
+</html>
