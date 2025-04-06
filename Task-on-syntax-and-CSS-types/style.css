@@ -1,0 +1,8 @@
+div{
+    background-color: blueviolet;
+    color: white;
+}
+div>h2, div>p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
