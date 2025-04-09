@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url("https://i.pinimg.com/736x/50/3b/17/503b174d539eb6e6a2a8ceca6ced9b04.jpg");
+    background-repeat: no-repeat;
+    background-size:100vw 100vh;
+    height: 100vh;
+    width: 100vw;
+    padding: 24px;
+
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 12px;
+    padding: 12px;
+}
+#solidborder{
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 12px;
+}
+#dottedborder{
+    border: 2px dotted white;
+    padding: 12px;
+    border-radius: 10px;
+}   
+
+#dashedborder{
+    border: 2px dashed white;
+    padding: 12px;
+    border-radius: 10px;
+}   
+
+#doubleborder{
+    border: 2px double white;
+    padding: 12px;
+    border-radius: 10px;
+}   
+
+.hover:hover{
+    box-shadow: 0 0 10px white;
+    cursor: pointer
+}
