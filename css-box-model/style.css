@@ -1,0 +1,77 @@
+.main{
+    display: flex;
+    gap: 20px;
+}
+#desc{
+    width: 400px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+ul{
+    list-style: inside;
+    font-size: 40px;
+}
+#contentMarker::marker{
+    vertical-align: middle;
+    font-size: 40px;
+    color:#fcf9da;
+}
+#paddingMarker::marker{
+    color:#e0ebf7;
+    font-size: 40px;
+}
+#borderMarker::marker{
+    color:#d3ed88;
+    font-size: 40px;
+
+}
+#marginMarker::marker{
+    color:#fcdfc7;
+    font-size: 40px;
+
+}
+#content{
+    border: 2px solid black;
+    background-color:#fcf9da;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    text-align: center;
+}
+#padding{
+    background-color: #e0ebf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 20px;
+    width: 120px;
+    height: 80px;
+    text-align: center;
+}
+#border{
+    background-color: #d3ed88;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 20px;
+    width: 160px;
+    height: 120px;
+    text-align: center;
+}
+
+#margin{
+    background-color: #fcdfc7;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 20px;
+    width: 240px;
+    height: 240px;
+    text-align: center;
+}
