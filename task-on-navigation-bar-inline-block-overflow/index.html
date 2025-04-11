@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on navigation inline-block and overflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task on navigation inline-block and overflow</h1>
+    <!-- Navigation -->
+    <h2>Navigation</h2>
+    <div class="navbar-div">
+        <div class="vertical-nav">
+            <nav class="vertical-navbar">
+                <h3>Vertical navbar -</h3>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger">
+            <svg viewBox="0 0 24 24"  width="28px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> </g></svg>
+        </div>
+        <div class="horizontal-nav">
+            <nav class="horizontal-navbar">
+                <h3>Horizontal navbar -</h3>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+       
+    </div>
+   
+    <!-- Overflow -->
+    <h2>Overflow</h2>
+    <div class="container">
+        <div class="cardHolder">
+            <div class="card" id="overflow-visible">
+                <p>Overflow visible</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum odit obcaecati, sit a delectus pariatur? Recusandae animi ducimus labore qui ratione magnam rem?</p>
+            </div>
+            <div class="card" id="overflow-hidden">
+                <p>Overflow hidden</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum odit obcaecati, sit a delectus pariatur? Recusandae animi ducimus labore qui ratione magnam rem?</p>
+            </div>
+            <div class="card" id="overflow-scroll">
+                <p>Overflow scroll</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum odit obcaecati, sit a delectus pariatur? Recusandae animi ducimus labore qui ratione magnam rem?</p>
+            </div>
+            <div class="card" id="overflow-auto">
+                <p>Overflow auto</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum odit obcaecati, sit a delectus pariatur? Recusandae animi ducimus labore qui ratione magnam rem?</p>
+         </div>
+        </div>
+    </div>
+   
+     <!-- inline, inline-block, block -->
+      <h2>Inline, inline-block, block</h2>
+
+      <div class="container">
+        <div class="display-container">
+            <div class="inline">
+                <h3>inline</h3>
+                <p>h3 tag and p tag are by default block elements, but we can manually make them appear as inline elements</p>
+            </div>
+            <div class="inline-block">
+                <h3>inline-block</h3>
+                <p>The difference between inline and inline-block is that we can add width and height to inline-block elements whereas for inline elements we can't</p>
+            </div>
+            <div class="block">
+                <h3>block</h3>
+                <p>Block elements take the full width available, and start on a new line. We can add width and height to block elements</p>
+            </div>
+        </div>
+      </div>
+    
+
+</body>
+</html>
