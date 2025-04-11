@@ -1,0 +1,109 @@
+/* Styles for navbar */
+
+.horizontal-navbar a{
+    text-decoration: none;
+    color: white;
+}
+.horizontal-navbar a:visited{
+    color: white;
+}
+.horizontal-navbar a:hover{
+    color: #ffcc00;
+}
+.horizontal-navbar ul{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333;
+    padding: 10px;
+}
+.horizontal-navbar ul li{
+    list-style: none;
+}
+
+
+.vertical-navbar ul{
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+}
+.vertical-navbar ul li{
+    list-style: none;
+}
+.vertical-navbar a{
+    text-decoration: none;
+    color: white;
+}
+.vertical-navbar a:visited{
+    color: white;
+}
+.vertical-navbar a:hover{
+    color: #ffcc00;
+}
+
+/* Vertical side bar will collapse into hamburger icon when screen width is less than 600px */
+@media screen and (max-width: 600px){
+    .vertical-nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+/* Vertical side bar will appear only when screen width is greater than 600px*/
+@media screen and (min-width: 601px){
+    .vertical-nav{
+        display: block;
+    }
+    .hamburger{
+        display: none;
+    }
+}
+/* Styles for overflow */
+.container{
+    overflow: auto;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 200px;
+}
+.cardHolder{
+    display: flex;
+    gap: 10px;
+}
+.card{
+    width: 100px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+}
+#overflow-visible{
+    overflow: visible;
+}
+#overflow-hidden{
+    overflow: hidden;
+}
+#overflow-scroll{
+    overflow: scroll;
+}
+#overflow-auto{
+    overflow: auto;
+}
+
+/* Styles for inline, inline-block, block */
+.inline h3, .inline p{
+    border: 1px solid black;
+    display: inline;
+}
+.inline-block h3, .inline-block p{
+    width: 100px;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid black;
+    display: inline-block;
+}
+.block h3, .block p{
+    width: 100px;
+    border: 1px solid black;
+    display: block;
+}
