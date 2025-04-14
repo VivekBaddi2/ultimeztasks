@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on Array and its methods</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <script>
+        var numbers=[10,5,8,3,12,6];
+        console.log(numbers.length);
+
+        numbers.push(7);
+        console.log(numbers.toString());
+
+        numbers.shift();
+        console.log(numbers.toString());
+
+        numbers.sort();
+        console.log(numbers.toString());
+
+        numbers.reverse();
+        console.log(numbers.toString());
+
+        let index=numbers.indexOf(8);
+        index!=-1?console.log("Number 8 exists"):console.log("Number 8 does not exist");
+
+        index=numbers.indexOf(12);
+        console.log("Index of 12 is: ",index);
+
+        var doubledNumbers=[];
+        for(let i=0;i<numbers.length;i++){
+            doubledNumbers[i]=numbers[i]*2;
+        }
+        console.log("Doubled numbers: ",doubledNumbers.toString());
+        </script>
+</body>
+</html>
