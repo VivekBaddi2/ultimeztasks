@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JS operators and datatypes</title>
+</head>
+<body>
+    <h1>Age calculator</h1>
+    <h2>Test cases - solution</h2>
+    <label>calculateAge(1990,2024) - </label>
+    <label id="solution1"></label><br><br>
+    <label>calculateAge(2000,1995) - </label>
+    <label id="solution2"></label><br><br>
+    <label>calculateAge(1995,"2024") - </label>
+    <label id="solution3"></label><br><br>
+    <label>calculateAge("1995",2024) - </label>
+    <label id="solution4"></label><br><br>
+    <label>calculateAge("abcd","xyz") - </label>
+    <label id="solution5"></label><br><br>
+
+    <script>
+        function calculateAge(birthYear, currentYear){
+            let output;
+            let compareYears = birthYear > currentYear ? output="Birth year should not be greater than current year" : false;
+ 
+            if(compareYears==false){
+                output=`You are ${currentYear-birthYear} years old`;
+                
+            }
+            if(isNaN(birthYear) || isNaN(currentYear)){
+                output="Please enter valid year"
+            }
+            return output;
+        }
+        document.getElementById("solution1").innerHTML = calculateAge(1990,2024);
+        document.getElementById("solution2").innerHTML = calculateAge(2000,1995);
+        document.getElementById("solution3").innerHTML = calculateAge(1995,"2024");
+        document.getElementById("solution4").innerHTML = calculateAge("1995",2024);
+        document.getElementById("solution5").innerHTML = calculateAge("abcd","xyz");
+    </script>
+</body>
+</html>
