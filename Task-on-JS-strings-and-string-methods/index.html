@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JS strings and string methods</title>
+</head>
+<body>
+    <h1>Task on JS strings and string methods</h1>
+    <form>
+        <label for="stringInput">Enter a string: </label>
+        <input type="text" id="stringInput" required>
+        <button type="button" onclick=" document.getElementById('output').innerHTML = `<pre>${JSON.stringify(analyzeString(), null, 2)}</pre>`;">Submit</button>
+    </form>
+    <h2>Output</h2>
+    <div id="output"></div>
+    
+    <script>
+        function analyzeString(){
+            let str=document.getElementById("stringInput").value;
+            let length=str.length;
+            let uppercase=str.toUpperCase();    
+            let lowercase=str.toLowerCase();
+            let js="JavaScript";
+            let findJs=str.toLowerCase().indexOf(js.toLowerCase());
+            const count = str.split('a').length - 1;
+
+            obj={
+                "String":str,
+                "Length":length,
+                "Uppercase":uppercase,
+                "Lowercase":lowercase,
+                "Index of 'JavaScript'":findJs,
+                "Occurrences of 'a'":count
+            }
+
+            return obj;
+        }
+        
+    </script>
+</body>
+</html>
