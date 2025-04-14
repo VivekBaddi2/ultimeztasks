@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JS Variables and Scope</title>
+
+</head>
+<body>
+    <h2>Area of rectangle calculator:</h2>
+    <form>
+        <label for="length">Enter length of rectangle:</label><br>
+        <input type="number" id="length" required><br><br>
+        <label for="width">Enter width of rectangle:</label><br>
+        <input type="number" id="width" required><br><br>
+
+        <label for="output">Area of rectangle:</label>
+        <label id="output"></label><br><br>
+        <button type="button" onclick="calculateArea()">Calculate</button>
+    </form>
+
+    <script>
+        function calculateArea(){
+            let length=document.getElementById('length').value;
+            let width=document.getElementById('width').value;
+            let area=length*width;
+            
+            let output=document.getElementById('output').innerHTML=area;
+        }
+    </script>
+</body>
+</html>
