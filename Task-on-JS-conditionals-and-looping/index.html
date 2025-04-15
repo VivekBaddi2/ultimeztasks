@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JavaScript conditional and looping statements</title>
+</head>
+<body>
+    <h1>Task on JavaScript conditional and looping statements</h1>
+    <button type="submit" onclick="myfunc()">Click here</button>
+    <p id="output"></p>
+    <script>
+        function myfunc(){
+            let output=document.getElementById("output");
+            output.innerHTML="Output generated, please check console for output";
+
+            // Conditional statements
+            // if statement
+            console.log("Output for if statement: ");
+            let a=10;
+            if(a>0){
+                console.log("a is positive");
+            }
+
+            //  if-else statement
+            console.log("Output for if-else statement: ");
+            let b=-5;
+            if(b>0){
+                console.log("b is positive");
+            }
+            else{
+                console.log("b is negative");
+            }
+
+            // if-else if-else statement
+            console.log("Output for if-else if-else statement: ");
+            let c=0;
+            if(c>0){
+                console.log("c is positive");
+            }
+            else if(c==0){
+                console.log("c is zero");
+            }
+            else{
+                console.log("c is negative");
+            }
+
+            // switch statement
+            console.log("Output for switch statement: ");
+            let day="Wednesday";
+            switch(day){
+                case "Monday":
+                    console.log("Today is Monday");
+                    break;
+                case "Tuesday":
+                    console.log("Today is Tuesday");
+                    break;
+                case "Wednesday":
+                    console.log("Today is Wednesday");
+                    break;
+                default:
+                    console.log("It is not Monday, Tuesday or Wednesday");
+            }
+
+
+            // Looping statements
+            // for loop
+            console.log("Output for 'for' loop: ");
+            for(let i=0;i<4;i++){
+                console.log("i is: ",i);
+            }
+
+            // while loop
+            console.log("Output for 'while' loop: ");
+            let j=5
+            while(j>0){
+                console.log("j is: ",j);
+                j--;
+            }
+
+            // do while loop
+            console.log("Output for 'do while' loop: ");
+            let k=5;
+            do{
+                console.log("k is: ",k);
+                k--;
+            }while(k>0);
+
+            // for in loop
+            console.log("Output for 'for-in' loop: ");
+            let person={
+                name:"Vivek",
+                age:"21",
+                gender:"Male"
+            }
+            for(let key in person){
+                console.log(`${key}: ${person[key]}`);
+            }
+
+            // for of loop
+            console.log("Output for 'for-of' loop: ");
+            let arr=[1,2,3,4,5];
+            for(let value of arr){
+                console.log("value is: ",value);
+            }
+        }
+    </script>
+</body>
+</html>
