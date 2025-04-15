@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JavaScript functions</title>
+</head>
+<body>
+    <h1>Task on JavaScript functions</h1>
+    <p>This program takes your name as a string input, and reverses it as output</p>
+    <label for="name">Enter your name:</label><br>
+    <input type="text" id="name"><br><br>
+    <button type="submit" onclick="main()">reverse</button>
+    <p id="output"></p>
+    <script>
+        var inputName=document.getElementById('name');
+        var output=document.getElementById('output');
+
+        // Function to reverse a string
+        let reversedString=function(str){
+            let reversedStr=str.split('').reverse().join('');
+            return reversedStr;
+        }
+        function main(){
+            output.innerHTML="Reversed string is: "+reversedString(inputName.value);
+        }
+    </script>
+</body>
+</html>
