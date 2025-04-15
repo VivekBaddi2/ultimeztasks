@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on Promises and async/await</title>
+</head>
+
+<body>
+    <h1>Task on Promises and async/await</h1>
+    <button type="submit" onclick="myFunc()">click here</button>
+    <p id="output"></p>
+    <script>
+        function myFunc(){
+            output=document.getElementById('output')
+            output.innerHTML=`Output is generated, please check the console.`
+            // Calling a dummy api using promises
+            myPromise = new Promise((resolve, reject) => {
+                let api = fetch('https://jsonplaceholder.typicode.com/todos/1')
+                if (api) {
+                    resolve(api)
+                } else {
+                    reject('Operation failed')
+                }
+            })
+            myPromise.then(response => {
+                return response.json()
+            }).then(data => {
+                console.log('calling api using promise')
+                console.log(data)
+            }).catch(error => {
+                console.log('calling api using promise')
+                console.error(
+                    'Error:', error)
+            });
+
+
+            // Calling a dummy api using async/await
+            async function fetchData() {
+                response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+                data = await response.json()
+                return data
+            }
+            fetchData().then(data => {
+                console.log("Calling api using async-await")
+                console.log(data)
+            }).catch(error => {
+
+                console.log("Calling api using async-await")
+                console.error('Error fetching data:', error)
+            })
+        }
+
+    </script>
+</body>
+
+</html>
