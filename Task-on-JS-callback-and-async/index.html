@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JavaScript Callbacks and Asynchronous operations</title>
+</head>
+
+<body>
+    <h1>Task on JavaScript Callbacks and Asynchronous operations</h1>
+    <button type="submit" onclick="myFunc()">click here</button>
+    <script>
+        function myFunc() {
+            num1=8
+            num2=4
+            operation="multiplication"
+           
+            function calculate(num1,num2,operation,callback){
+                if(operation=='addition'){
+                    add=num1+num2;
+                    callback(add);
+                }
+                else if(operation=='subtraction'){
+                    sub=num1-num2;
+                    callback(sub);
+                }
+                else if(operation=='multiplication'){
+                    mul=num1*num2;
+                    callback(mul);
+                }
+                else if(operation=='division'){
+                    div=num1/num2;
+                    callback(div);
+                }
+                else if(operation=='modulus'){
+                    mod=num1%num2;
+                    callback(mod);
+                }
+                else{
+                    console.log("Invalid operation")
+                }
+                
+            }
+            function result(result){
+                console.log("Result:", result);
+            }
+            calculate(num1,num2,operation,result);
+        }
+    </script>
+</body>
+
+</html>
