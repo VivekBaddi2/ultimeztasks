@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JavaScript date and regex</title>
+</head>
+
+<body>
+    <h1>Task on JavaScript date and regex</h1>
+    <button type="submit" onclick="myfunc()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function myfunc() {
+            let output=document.getElementById("output");
+            output.innerHTML="Output generated, please check console for output";
+            // Print current date in console
+            const currentDate = new Date();
+            console.log(currentDate);
+
+            // Print Specific date and time
+            const specificDate = new Date('2023-10-01T12:00:00');
+            console.log(specificDate);
+
+            // Using milliseconds since epoch
+            const usingMS = new Date(1745154715462);
+            console.log(usingMS);
+
+            // Access date content
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const day = date.getDate();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            console.log(`Year: ${year}, Month: ${month + 1}, Day: ${day}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`);
+
+            // Format date
+            const formattedDate = date.toLocaleDateString('en-JP');
+            console.log(formattedDate);
+
+            // Manipulate date
+            const manipulateDate = date.setDate(date.getDate() - 5);
+            console.log(manipulateDate);
+
+            // compare dates
+            if (manipulateDate < currentDate) {
+                console.log("manipulate date is less than current date");
+            }
+            else {
+                console.log("manipulate date is greater than current date");
+            }
+
+
+            // Regular expressions
+            let string = "There was a UFO flying in the sky yesterday";
+            let regex = /UFO/;
+            let regex2 = /car/;
+            console.log(regex.test(string));
+            console.log(regex2.test(string));
+
+            let pattern = /\b[dD]\w+/g;
+            let str = "Today I saw a dog Dancing on top of my car.";
+            console.log(str.match(pattern));
+
+            pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,}$/;
+            let email = "vivekbaddi2@gmail.com";
+            let email2 = "vivek#gmail.com";
+            console.log(pattern.test(email));
+            console.log(pattern.test(email2));
+        }
+
+    </script>
+</body>
+
+</html>
