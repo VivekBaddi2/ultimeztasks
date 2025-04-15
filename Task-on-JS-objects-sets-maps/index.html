@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task on JS objects, sets and maps</title>
+</head>
+<body>
+    <h1>Task on JS objects, sets and maps</h1>
+    <h2>Task on objects</h2>
+    <div id="objectsOutput"></div>
+
+    <h2>Task on sets</h2>
+    <div id="setsOutput"></div>
+
+    <h2>Task on map</h2>
+    <div id="mapOutput"></div>
+    <script>
+        // Task on objects 
+
+        let objectsOutput = document.getElementById("objectsOutput");
+
+        function Person(name,age,gender,occupation){
+            this.name=name,
+            this.age=age,
+            this.gender=gender,
+            this.occupation=occupation
+        }
+        const person1=new Person();
+        person1.name="John Doe";
+        person1.age=30;
+        person1.gender="male";
+        person1.occupation="Software Engineer"; 
+        
+        const person2=new Person();
+        person2.name="Marry Jane";
+        person2.age=27;
+        person2.gender="female";
+        person2.occupation="Graohic Designer";
+
+        console.log(person1);
+        console.log(person2);
+
+        objectsOutput.innerHTML += `<p><strong>Person-1:</strong> ${JSON.stringify(person1)}`;
+        objectsOutput.innerHTML += `<p><strong>Person-2:</strong> ${JSON.stringify(person2)}`;
+
+        // Task on sets
+
+        var setsOutput = document.getElementById("setsOutput"); 
+        var arr=[1,2,3,4,5,5,6,6,7];
+        
+        function createSet(arr){
+            let set=new Set(arr);
+            return set;
+        }
+        let set=createSet(arr);
+        console.log(set);
+        setsOutput.innerHTML+=`<p><strong>Input array:</strong> ${arr}</p>`;
+        setsOutput.innerHTML += `<p><strong>Output Set:</strong> ${Array.from(set).join(", ")}</p>`;
+
+
+        const set1=new Set([1,2,3,4,5]);
+        const set2=new Set([4,5,6,7,8]);
+        setsOutput.innerHTML += `<p><strong>set-1:</strong> ${Array.from(set1).join(", ")}</p>`;
+        setsOutput.innerHTML += `<p><strong>set-2:</strong> ${Array.from(set2).join(", ")}</p>`;
+        
+        // Union of two sets
+        unionSet=set1.union(set2);
+        setsOutput.innerHTML += `<p><strong>Union of two sets:</strong> ${Array.from(unionSet).join(", ")}</p>`;
+        // intersection of two sets
+        intersectionSet=set1.intersection(set2);
+        setsOutput.innerHTML += `<p><strong>Intersection of two sets:</strong> ${Array.from(intersectionSet).join(", ")}</p>`;
+
+        // difference of two sets
+        differenceSet=set1.difference(set2);   
+        setsOutput.innerHTML += `<p><strong>Difference of two sets:</strong> ${Array.from(differenceSet).join(", ")}</p>`;
+
+        // To check if unionSet is a subset of set1
+        let isSubset = unionSet.isSubsetOf(set1);
+        setsOutput.innerHTML += `<p><strong>Is "Union of two sets" a subset of set-1 :</strong> ${isSubset}</p>`;
+
+        // To check if differenceSet is a subset of set1
+        isSubset = differenceSet.isSubsetOf(set1);
+        setsOutput.innerHTML += `<p><strong>Is "Difference of two sets" a subset of set-1 :</strong> ${isSubset}</p>`;
+
+
+        // Task on maps
+        // Creating a map
+        var mapOutput = document.getElementById("mapOutput");
+        var vehicles=new Map([
+            ["car", "Toyota"],
+            ["bike", "Yamaha"],
+            ["truck", "Ford"]
+        ]);
+        console.log(vehicles);
+        vehicles.set("bus", "Mercedes");
+        vehicles.set("van", "Omni");
+        mapOutput.innerHTML += `<p><strong>Vehicles Map:</strong></p>`;
+        vehicles.forEach((value, key) => {
+            mapOutput.innerHTML += `${key} => ${value} , `;
+        });
+
+        // Accessing values
+        var car=vehicles.get("car");
+        var bike=vehicles.get("bike");
+        mapOutput.innerHTML += `<p><strong>Car Value</strong>: ${car}</p>`;
+        mapOutput.innerHTML += `<p><strong>Bike Value</strong>: ${bike}</p>`;
+
+        // updating values
+        vehicles.set("car", "Honda");
+        vehicles.set("bike", "Ducati");
+        mapOutput.innerHTML += `<p><strong>Updated Vehicles Map:</strong></p>`;
+        vehicles.forEach((value, key) => {
+            mapOutput.innerHTML += `${key} => ${value} , `;
+        });
+
+        // Deleting a key-value pair
+        vehicles.delete("truck");
+        mapOutput.innerHTML += `<p><strong>Map after deleting truck:</strong></p>`;
+        vehicles.forEach((value, key) => {
+            mapOutput.innerHTML += `${key} => ${value} , `;
+        });
+    </script>
+</body>
+</html>
